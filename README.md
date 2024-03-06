@@ -1,6 +1,6 @@
 # CloudBudget - Business Landing Page
 
-This webpage took its original design from a dribble which can be found [here](https://www.figmacrush.com/business-landing-page-figma-template/). Converted it to code with HTML,CSS/SASS, JavaScript technology.
+This webpage took its original design from dribbble.com which can be found [here](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie). Converted it to code with HTML,CSS/SASS, and JavaScript.
 
 ### Version
 
