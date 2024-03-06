@@ -1,0 +1,20 @@
+@use 'mediaquery' as mediaquery;
+
+@mixin flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-sb {
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-se {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.col-2 {
+  flex: 1 1 40rem;
+}

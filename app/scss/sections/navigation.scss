@@ -1,0 +1,96 @@
+@use '../abstracts/' as var;
+@use '../layouts/' as layout;
+
+.navbar {
+  font-size: 1.4rem;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-bottom: 1.7rem;
+  transition: transform 1s;
+  @include layout.flex-sb;
+
+  &__logo {
+    a {
+      font-size: 1.6rem;
+      color: #fff;
+      display: flex;
+      @include layout.flex-center;
+    }
+
+    img {
+      width: 3rem;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-weight: var.$font-700;
+      margin-left: 0.652rem;
+    }
+  }
+
+  &__menu {
+    font-weight: var.$font-400;
+    display: flex;
+
+    &.openMenuMobile {
+      background: rgba(19, 19, 19, 0.8);
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
+    li {
+      margin: 1rem;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__location {
+    display: none;
+    font-weight: var.$font-400;
+
+    li {
+      a {
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      display: block;
+      background: #fff;
+      width: 2rem;
+      height: 0.265rem;
+      margin-top: 0.265rem;
+      margin-bottom: 0.265rem;
+      transition: all 250ms ease;
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          margin: 8px auto;
+          transform: translateY(13px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          margin: 8px auto;
+          transform: translateY(-13px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
