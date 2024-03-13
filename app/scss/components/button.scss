@@ -1,0 +1,17 @@
+@use '../abstracts/' as var;
+
+.btn {
+  padding: 1rem 3rem;
+  border-radius: 0.652rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.btn--bg--white {
+  background: #fff;
+}
+
+.btn--text--colored {
+  color: var.$link-text-color;
+}

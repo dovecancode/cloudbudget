@@ -1,5 +1,6 @@
 @use '../abstracts/' as var;
 @use '../layouts/' as layout;
+@use '../layouts/mediaquery' as response;
 
 .navbar {
   font-size: 1.4rem;
@@ -32,7 +33,12 @@
 
   &__menu {
     font-weight: var.$font-400;
-    display: flex;
+    display: none;
+    @include layout.flex-center;
+
+    @include response.min-width-breakpoints(laptop) {
+      display: flex;
+    }
 
     &.openMenuMobile {
       background: rgba(19, 19, 19, 0.8);
@@ -47,6 +53,11 @@
         color: #fff;
         text-transform: uppercase;
       }
+      &:nth-child(6) {
+        @include response.min-width-breakpoints(laptop) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -54,27 +65,30 @@
     display: none;
     font-weight: var.$font-400;
 
-    li {
-      a {
-        color: #fff;
-        text-transform: uppercase;
-      }
+    @include response.min-width-breakpoints(laptop) {
+      display: flex;
+    }
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
     }
   }
 
   &__hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 1.9rem;
     cursor: pointer;
 
+    @include response.min-width-breakpoints(laptop) {
+      display: none;
+    }
     span {
-      display: block;
-      background: #fff;
       width: 2rem;
-      height: 0.265rem;
-      margin-top: 0.265rem;
-      margin-bottom: 0.265rem;
-      transition: all 250ms ease;
+      height: 0.3rem;
+      background: #fff;
     }
 
     &.active {
