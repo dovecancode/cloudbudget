@@ -1,2 +1,2 @@
-.col-2{flex:1 1 40rem}
+@media only screen and (min-width:64em){.col-2{flex:0 1 calc(50% - 1.5rem)}}
 /*# sourceMappingURL=layouts.css.map */

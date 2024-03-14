@@ -1,0 +1,22 @@
+@use '../abstracts/' as var;
+
+.heading-h2 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+}
+
+.p-line {
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+
+@mixin linkTag($col) {
+  .link {
+    text-transform: capitalize;
+    color: var.$link-text-color;
+    display: block;
+    @if ($col == two) {
+      font-size: clamp(1.8rem, 1vw, 2rem);
+    } @else if($col== three) {
+      font-size: 1.6rem;
+    }
+  }
+}

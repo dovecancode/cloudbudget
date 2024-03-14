@@ -1,0 +1,49 @@
+@use '../abstracts/' as var;
+@use '../base/typography' as typography;
+@use '../layouts/mediaquery' as mediaquery;
+@use '../layouts/layouts' as layout;
+
+.manage {
+  padding: 8rem 0;
+  @include layout.flex-layout(twoCol);
+  &__text {
+    padding-bottom: 6rem;
+    @include mediaquery.min-width-breakpoints(laptop) {
+      padding-right: 8rem;
+    }
+  }
+  &__video {
+    position: relative;
+    img {
+      border-radius: 2rem;
+    }
+  }
+  &__video-play {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mediaquery.min-width-breakpoints(laptop) {
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .fa-play {
+      background: var.$link-text-color;
+      color: #fff;
+      width: 8rem;
+      height: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5rem;
+    }
+  }
+
+  @include typography.linkTag(two);
+}
