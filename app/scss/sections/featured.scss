@@ -1,0 +1,7 @@
+@use '../layouts/layouts' as layouts;
+
+.featured {
+  padding-block: 6rem;
+  background: #fafafa;
+  @include layouts.flex-layout(threeCol);
+}
