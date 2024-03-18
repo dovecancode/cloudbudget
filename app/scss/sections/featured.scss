@@ -3,5 +3,5 @@
 .featured {
   padding-block: 6rem;
   background: #fafafa;
-  @include layouts.flex-layout(threeCol);
+  @include layouts.flex-layout();
 }

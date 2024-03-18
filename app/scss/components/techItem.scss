@@ -1,0 +1,12 @@
+@use '../abstracts/' as var;
+
+.technology__item {
+  text-align: center;
+  margin: 8rem 1rem 1rem;
+  font-size: clamp(1.8rem, 1vw, 2rem);
+
+  .fas {
+    color: var.$link-text-color;
+    font-size: 5rem;
+  }
+}

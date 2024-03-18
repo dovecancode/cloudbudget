@@ -15,35 +15,48 @@
   align-items: center;
 }
 
-@mixin flex-layout($col) {
+@mixin flex-layout($col: layout) {
   .d-flex-layout {
-    display: flex;
-    flex-wrap: wrap;
-    @if ($col == twoCol) {
-      align-items: center;
-      justify-content: space-between;
-    } @else if($col == threeCol) {
-      @include flex-sb;
-    } @else if($col == fourCol) {
-      justify-content: space-between;
-      align-items: flex-start;
-      @include mediaquery.min-width-breakpoints(laptop) {
-        justify-content: center;
-        align-items: center;
-      }
+    @include mediaquery.min-width-breakpoints(tablet) {
+      display: flex;
     }
+    flex-wrap: wrap;
+    @include flex-sb;
+    // @include flex-sb;
+    // @if ($col == twoCol) {
+    //   @include flex-sb;
+    // } @else if($col == threeCol) {
+    //   @include flex-sb;
+    // } @else if($col == fourCol) {
+    //   justify-content: space-between;
+    //   align-items: flex-start;
+    //   @include mediaquery.min-width-breakpoints(laptop) {
+    //     justify-content: center;
+    //     align-items: center;
+    //   }
+    // }
   }
 }
 
 .col-2 {
-  @include mediaquery.min-width-breakpoints(laptop) {
+  @include mediaquery.min-width-breakpoints(tablet) {
     // flex: 1 1 calc(100% / 2 - 1.5rem);
     flex: 0 1 calc(100% / 2 - 1.5rem);
   }
 }
 
 .col-3 {
-  @include mediaquery.min-width-breakpoints(laptop) {
+  @include mediaquery.min-width-breakpoints(tablet) {
     flex: 0 1 calc(100% / 3 - 1.5rem);
+  }
+}
+
+.col-4 {
+  @include mediaquery.min-width-breakpoints(tablet) {
+    flex: 0 1 calc(100% / 2 - 6rem);
+  }
+
+  @include mediaquery.min-width-breakpoints(laptop) {
+    flex: 0 1 calc(100% / 4 - 6rem);
   }
 }

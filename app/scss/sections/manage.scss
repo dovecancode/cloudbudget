@@ -1,11 +1,11 @@
 @use '../abstracts/' as var;
 @use '../base/typography' as typography;
 @use '../layouts/mediaquery' as mediaquery;
-@use '../layouts/layouts' as layout;
+@use '../layouts/layouts' as layouts;
 
 .manage {
   padding: 8rem 0;
-  @include layout.flex-layout(twoCol);
+  @include layouts.flex-layout();
   &__text {
     padding-bottom: 6rem;
     @include mediaquery.min-width-breakpoints(laptop) {

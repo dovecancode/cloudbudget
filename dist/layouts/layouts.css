@@ -1,2 +1,2 @@
-@media (width > 60em){.col-2{flex:0 1 calc(50% - 1.5rem)}.col-3{flex:0 1 calc(33.33333% - 1.5rem)}}
+@media (width > 48em){.col-2{flex:0 1 calc(50% - 1.5rem)}.col-3{flex:0 1 calc(33.33333% - 1.5rem)}.col-4{flex:0 1 calc(50% - 6rem)}}@media (width > 70em){.col-4{flex:0 1 calc(25% - 6rem)}}
 /*# sourceMappingURL=layouts.css.map */
