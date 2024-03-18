@@ -1,12 +1,40 @@
 @use '../abstracts/' as var;
 
 .technology__item {
-  text-align: center;
-  margin: 8rem 1rem 1rem;
   font-size: clamp(1.8rem, 1vw, 2rem);
+  text-align: center;
+  margin-top: 8rem;
+  position: relative;
 
   .fas {
     color: var.$link-text-color;
     font-size: 5rem;
+  }
+
+  &:nth-child(1):before {
+    content: '01';
+  }
+  &:nth-child(2):before {
+    content: '02';
+  }
+  &:nth-child(3):before {
+    content: '03';
+  }
+  &:nth-child(4):before {
+    content: '04';
+  }
+
+  &:nth-child(1):before,
+  &:nth-child(2):before,
+  &:nth-child(3):before,
+  &:nth-child(4):before {
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgba(16, 16, 16, 0.08);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6.8rem;
+    z-index: -1;
   }
 }
