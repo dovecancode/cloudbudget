@@ -7,7 +7,7 @@ const terser = require('gulp-terser')
 const browsersync = require('browser-sync').create()
 
 const files = {
-  scssPath: 'app/scss/**/*.scss',
+  scssPath: 'app/scss/style.scss',
 }
 
 // Sass Task
