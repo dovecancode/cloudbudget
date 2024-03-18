@@ -2,8 +2,8 @@
 $min-width-breakpoints: (
   'mobile': '25em',
   'tablet': '48em',
-  'laptop': '60em',
-  'desktop': '75.5em',
+  'laptop': '70em',
+  // 'desktop': '75.5em',
 );
 
 @mixin min-width-breakpoints($size) {

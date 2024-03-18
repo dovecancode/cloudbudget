@@ -1,0 +1,5 @@
+@use '../layouts/layouts.scss' as layouts;
+.technology {
+  padding: 5rem 0;
+  @include layouts.flex-layout();
+}
