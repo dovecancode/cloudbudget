@@ -1,0 +1,27 @@
+@use '../layouts/layouts' as layouts;
+@use '../abstracts/' as var;
+.app {
+  padding: 8rem 0;
+  background: var.$link-text-color;
+  color: #fff;
+
+  @include layouts.flex-layout();
+
+  &__text {
+    padding-bottom: 6rem;
+  }
+
+  &__social {
+    font-size: clamp(1.8rem, 1vw, 2rem);
+    a {
+      color: #fff;
+      margin-right: 2rem;
+    }
+  }
+
+  &__video-slider {
+    img {
+      border-radius: 2rem;
+    }
+  }
+}

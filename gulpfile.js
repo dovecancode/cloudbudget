@@ -43,7 +43,7 @@ function browsersyncReload(cb) {
 function watchTask() {
   watch('*.html', browsersyncReload)
   watch(
-    [files.scssPath, 'app/js/**/*.js'],
+    ['app/scss/**/*.scss', 'app/js/**/*.js'],
     series(fireStyleTask, fireJsTask, browsersyncReload)
   )
 }
