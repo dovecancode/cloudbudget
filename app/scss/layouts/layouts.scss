@@ -41,7 +41,12 @@
 .col-2 {
   @include mediaquery.min-width-breakpoints(tablet) {
     // flex: 1 1 calc(100% / 2 - 1.5rem);
-    flex: 0 1 calc(100% / 2 - 1.5rem);
+    flex: 0 1 calc(100% / 2 - 2rem);
+  }
+
+  @include mediaquery.min-width-breakpoints(laptop) {
+    // flex: 1 1 calc(100% / 2 - 1.5rem);
+    flex: 0 1 calc(100% / 2 - 5rem);
   }
 }
 

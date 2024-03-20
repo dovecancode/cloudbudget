@@ -1,0 +1,49 @@
+.contact {
+  &__form {
+    .form {
+      input,
+      select,
+      option {
+        color: #132743;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 2rem 1.8rem 2rem;
+        border-radius: 1rem;
+        border: 1px solid #333333;
+        outline: none;
+      }
+
+      // idea came from https://www.codegrepper.com/code-examples/css/css+select+arrow+position
+      select {
+        appearance: none;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+          no-repeat right;
+        background-position-x: 97%;
+      }
+
+      &__col-2-input {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .col {
+          flex: 0 1 48%;
+        }
+      }
+
+      &__input {
+        margin-bottom: 2rem;
+      }
+
+      &__btn {
+        cursor: pointer;
+        display: block;
+        background: #ed4c5c;
+        border: none;
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}

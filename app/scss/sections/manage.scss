@@ -8,9 +8,9 @@
   @include layouts.flex-layout();
   &__text {
     padding-bottom: 6rem;
-    @include mediaquery.min-width-breakpoints(laptop) {
-      padding-right: 8rem;
-    }
+    // @include mediaquery.min-width-breakpoints(laptop) {
+    //   padding-right: 8rem;
+    // }
   }
   &__video {
     position: relative;
