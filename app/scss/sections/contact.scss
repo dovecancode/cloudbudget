@@ -1,0 +1,11 @@
+@use '../layouts/layouts' as layouts;
+
+.contact {
+  padding: 8rem 0;
+
+  @include layouts.flex-layout;
+
+  &__text {
+    padding-bottom: 6rem;
+  }
+}
