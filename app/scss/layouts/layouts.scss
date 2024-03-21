@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-@mixin flex-layout($col: layout) {
+@mixin flex-layout() {
   .d-flex-layout {
     @include mediaquery.min-width-breakpoints(tablet) {
       display: flex;
