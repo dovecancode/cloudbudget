@@ -1,0 +1,59 @@
+@use '../layouts' as mediaquery;
+@use '../abstracts/' as var;
+.footer {
+  background: #fafafa;
+  &__widgets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: clamp(1.8rem, 1vw, 2rem);
+  }
+
+  &__widget {
+    margin: 0 1rem 1rem;
+
+    img {
+      @include mediaquery.min-width-breakpoints(mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &__widget-links {
+    li {
+      a {
+        display: block;
+        text-transform: capitalize;
+        margin-bottom: 0.352rem;
+      }
+    }
+  }
+
+  &__widget-social {
+    display: flex;
+    li {
+      padding-right: 2rem;
+      a {
+        color: #101010;
+        transition: all 250ms ease;
+        &:hover {
+          color: var.$primary-color;
+        }
+      }
+    }
+  }
+
+  &__creds {
+    font-size: clamp(1.8rem, 1vw, 2rem);
+    padding: 3rem 0;
+    text-align: center;
+    padding-top: 2rem;
+    @include mediaquery.min-width-breakpoints(laptop) {
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
