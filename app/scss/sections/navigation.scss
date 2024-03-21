@@ -1,6 +1,6 @@
 @use '../abstracts/' as var;
 @use '../layouts/' as layout;
-@use '../layouts/mediaquery' as response;
+@use '../layouts' as mediaquery;
 
 .navbar {
   font-size: 1.4rem;
@@ -36,7 +36,7 @@
     display: none;
     @include layout.flex-center;
 
-    @include response.min-width-breakpoints(laptop) {
+    @include mediaquery.min-width-breakpoints(laptop) {
       display: flex;
     }
 
@@ -54,7 +54,7 @@
         text-transform: uppercase;
       }
       &:nth-child(6) {
-        @include response.min-width-breakpoints(laptop) {
+        @include mediaquery.min-width-breakpoints(laptop) {
           display: none;
         }
       }
@@ -65,7 +65,7 @@
     display: none;
     font-weight: var.$font-400;
 
-    @include response.min-width-breakpoints(laptop) {
+    @include mediaquery.min-width-breakpoints(laptop) {
       display: flex;
     }
 
@@ -82,7 +82,7 @@
     height: 1.9rem;
     cursor: pointer;
 
-    @include response.min-width-breakpoints(laptop) {
+    @include mediaquery.min-width-breakpoints(laptop) {
       display: none;
     }
     span {

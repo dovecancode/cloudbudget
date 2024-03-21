@@ -1,7 +1,7 @@
 @use '../abstracts/' as var;
-@use '../base/typography' as typography;
-@use '../layouts/mediaquery' as mediaquery;
-@use '../layouts/layouts' as layouts;
+@use '../base' as typography;
+@use '../layouts' as mediaquery;
+@use '../layouts' as layouts;
 
 .manage {
   padding: 8rem 0;

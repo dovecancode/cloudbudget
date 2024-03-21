@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-@mixin flex-layout($col: layout) {
+@mixin flex-layout() {
   .d-flex-layout {
     @include mediaquery.min-width-breakpoints(tablet) {
       display: flex;
@@ -56,7 +56,8 @@
   }
 }
 
-.col-4 {
+.col-4,
+.footer-widget {
   @include mediaquery.min-width-breakpoints(tablet) {
     flex: 0 1 calc(100% / 2 - 6rem);
   }
