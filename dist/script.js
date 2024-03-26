@@ -1,2 +1,2 @@
-const mobileMenu=(()=>{const e=document.getElementById("burgerEl"),t=document.querySelector(".navbar__hamburger");e.addEventListener("click",(()=>{t.classList.toggle("active")}))})();
+const burgerEl=document.getElementById("burgerEl"),hamburger=document.querySelector(".navbar__hamburger"),nav=document.querySelector(".navbar__menu"),mobileMenu=void burgerEl.addEventListener("click",(()=>{hamburger.classList.toggle("active"),nav.classList.toggle("openMenuMobile")}));
 //# sourceMappingURL=script.js.map
