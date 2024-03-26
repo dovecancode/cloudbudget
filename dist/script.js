@@ -1,2 +1,2 @@
-console.log("Hello world");
+const mobileMenu=(()=>{const e=document.getElementById("burgerEl"),t=document.querySelector(".navbar__hamburger");e.addEventListener("click",(()=>{t.classList.toggle("active")}))})();
 //# sourceMappingURL=script.js.map

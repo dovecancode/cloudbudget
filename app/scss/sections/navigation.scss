@@ -40,13 +40,6 @@
       display: flex;
     }
 
-    &.openMenuMobile {
-      background: rgba(19, 19, 19, 0.8);
-      transform: translateY(0);
-      opacity: 1;
-      transition: all 0.5s ease;
-    }
-
     li {
       margin: 1rem;
       a {
@@ -85,24 +78,24 @@
     @include mediaquery.min-width-breakpoints(laptop) {
       display: none;
     }
+
     span {
       width: 2rem;
       height: 0.3rem;
       background: #fff;
+      transition: all 250ms ease;
     }
 
     &.active {
       span {
         &:nth-child(1) {
-          margin: 8px auto;
-          transform: translateY(13px) rotate(45deg);
+          transform: translate(0px, 9px) rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:nth-child(3) {
-          margin: 8px auto;
-          transform: translateY(-13px) rotate(-45deg);
+          transform: translate(0, -7px) rotate(-45deg);
         }
       }
     }
